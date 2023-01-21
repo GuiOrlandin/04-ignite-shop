@@ -11,7 +11,6 @@ export const HomeContainer = styled("div", {
 export const Product = styled("div", {
   background: "linear-gradient(188deg, #1ea483 0%, #7465d4 100%)",
   borderRadius: 8,
-  cursor: "pointer",
   position: "relative",
   overflow: "hidden",
   color: "$gray100",
@@ -78,3 +77,7 @@ export const Product = styled("div", {
     },
   },
 });
+
+export const CardContainer = styled("div", {});
+
+export const AddNewItemButton = styled("button", {});

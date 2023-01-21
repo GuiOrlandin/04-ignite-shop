@@ -43,6 +43,7 @@ export const ItemContainer = styled("div", {
   width: "100%",
   height: "5.8125rem",
   margin: "1.5rem 20.625rem auto 3rem",
+  position: "relative",
 });
 
 export const ImageContainer = styled("div", {
@@ -74,7 +75,9 @@ export const ItemDescription = styled("div", {
   button: {
     marginTop: "0.5rem",
     background: "none",
+
     border: "none",
+
     color: "$green500",
     fontSize: "1rem",
     fontWeight: "bold",
@@ -83,5 +86,70 @@ export const ItemDescription = styled("div", {
     "&:hover": {
       color: "$green300",
     },
+  },
+});
+
+export const PaymentDetails = styled("div", {
+  position: "fixed",
+  top: "76%",
+});
+
+export const QuantityContainer = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "0 3rem",
+  lineHeight: "160%",
+
+  p: {
+    fontSize: "1rem",
+    color: "$gray100",
+  },
+
+  span: {
+    color: "$gray300",
+    fontSize: "$md",
+  },
+});
+
+export const TotalPriceContainer = styled("div", {
+  display: "flex",
+  justifyContent: "space-between",
+  color: "$gray100",
+  padding: "0.4375rem 3rem 0 3rem",
+  lineHeight: "160%",
+
+  p: {
+    fontSize: "$md",
+    fontWeight: "700",
+  },
+
+  strong: {
+    fontSize: "$xl",
+    fontWeight: "700",
+  },
+});
+
+export const FinishPaymentButton = styled("button", {
+  width: "24rem",
+  padding: "1.25rem 7.78125rem",
+  margin: "3.5625rem 3rem 0  3rem",
+
+  borderRadius: "8px",
+  border: "none",
+  overflow: "hidden",
+  boxShadow: "none",
+
+  fontSize: "$md",
+  color: "$white",
+  background: "$green500",
+
+  cursor: "pointer",
+
+  "&:hover": {
+    background: "$green300",
+  },
+
+  "&:disabled": {
+    cursor: "not-allowed",
   },
 });
