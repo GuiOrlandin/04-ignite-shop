@@ -20,6 +20,7 @@ import { Handbag } from "phosphor-react";
 import { useContext } from "react";
 import { CartContext } from "@/context/CartContext";
 import { useRouter } from "next/router";
+import HomeSkeleton from "@/components/HomeSkeleton";
 
 interface HomeProps {
   products: {
@@ -45,7 +46,7 @@ export default function Home({ products }: HomeProps) {
   });
 
   if (isFallback) {
-    return <p>Loading...</p>;
+    return <HomeSkeleton />;
   }
 
   return (
@@ -53,7 +54,6 @@ export default function Home({ products }: HomeProps) {
       <Head>
         <title>Home | Ignite Shop</title>
       </Head>
-
       <HomeContainer ref={sliderRef} className="keen-slider">
         {products.map((product) => {
           return (
