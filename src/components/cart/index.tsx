@@ -31,7 +31,6 @@ export default function Cart() {
       totalPriceItems += parseFloat(
         cartItem.price.replace("R$", "").replace(",", ".")
       );
-      console.log(totalPriceItems);
     });
 
     return totalPriceItems.toFixed(2).replace(".", ",");

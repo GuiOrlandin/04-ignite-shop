@@ -7,6 +7,7 @@ export const SuccessContainer = styled("main", {
   justifyContent: "center",
   margin: "0 auto",
   height: 656,
+  textAlign: "center",
 
   h1: {
     marginTop: "3rem",
@@ -43,16 +44,19 @@ export const ImageBackground = styled("div", {
   borderRadius: "50%",
   padding: "5rem",
   marginTop: "4rem",
+  marginLeft: "-4rem",
 
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 
   img: {
-    objectFit: "cpver",
+    objectFit: "cover",
   },
 });
 
 export const ImageContainer = styled("div", {
   display: "flex",
+  alignItems: "center",
+  marginLeft: "4rem",
 });

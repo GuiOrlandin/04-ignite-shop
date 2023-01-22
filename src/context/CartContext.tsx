@@ -26,7 +26,6 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
   function addNewItem(item: CartItems) {
     SetCartItems((state) => [...state, item]);
-    console.log(cartItems);
   }
 
   function removeItem(item: CartItems) {
