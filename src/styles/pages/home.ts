@@ -9,19 +9,22 @@ export const HomeContainer = styled("div", {
 });
 
 export const Product = styled("div", {
-  background: "linear-gradient(188deg, #1ea483 0%, #7465d4 100%)",
-  borderRadius: 8,
-  position: "relative",
-  overflow: "hidden",
-  color: "$gray100",
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
   img: {
     objectFit: "cover",
   },
+});
+
+export const CardContainer = styled("div", {
+  display: "flex",
+  position: "relative",
+  background: "linear-gradient(188deg, #1ea483 0%, #7465d4 100%)",
+  borderRadius: 8,
+
+  overflow: "hidden",
+  color: "$gray100",
+
+  alignItems: "center",
+  justifyContent: "center",
 
   footer: {
     position: "absolute",
@@ -77,7 +80,5 @@ export const Product = styled("div", {
     },
   },
 });
-
-export const CardContainer = styled("div", {});
 
 export const AddNewItemButton = styled("button", {});

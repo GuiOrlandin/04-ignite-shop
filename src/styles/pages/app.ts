@@ -7,7 +7,7 @@ export const Container = styled("div", {
   minHeight: "100vh",
 });
 
-export const Header = styled("header", {
+export const HeaderContainer = styled("header", {
   display: "flex",
   justifyContent: "space-between",
   padding: "2rem 0",

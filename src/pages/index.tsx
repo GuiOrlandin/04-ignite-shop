@@ -56,27 +56,29 @@ export default function Home({ products }: HomeProps) {
 
       <HomeContainer ref={sliderRef} className="keen-slider">
         {products.map((product) => {
+          console.log(product);
+
           return (
-            <CardContainer key={product.id}>
+            <CardContainer key={product.id} className="keen-slider__slide">
               <Link href={`/product/${product.id}`} prefetch={false}>
-                <Product className="keen-slider__slide">
+                <Product>
                   <Image
                     src={product.imageUrl}
                     width={520}
                     height={480}
                     alt=""
                   />
-                  <footer>
-                    <div>
-                      <strong>{product.name}</strong>
-                      <span>{product.price}</span>
-                    </div>
-                    <AddNewItemButton onClick={() => addNewItem(product)}>
-                      <Handbag weight="bold" size={32} color="#FFF" />
-                    </AddNewItemButton>
-                  </footer>
                 </Product>
               </Link>
+              <footer>
+                <div>
+                  <strong>{product.name}</strong>
+                  <span>{product.price}</span>
+                </div>
+                <AddNewItemButton onClick={() => addNewItem(product)}>
+                  <Handbag weight="bold" size={32} color="#FFF" />
+                </AddNewItemButton>
+              </footer>
             </CardContainer>
           );
         })}
